@@ -25,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -130,6 +131,7 @@ LoadCursorTask task;
           super.onPostExecute(result);
           pb.setVisibility(View.INVISIBLE);
           search.setEnabled(true);
+          Toast.makeText(getActivity(),"The data has been loaded",Toast.LENGTH_SHORT).show();
           task = null;
       }
   }
