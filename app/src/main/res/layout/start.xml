@@ -5,17 +5,37 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter the url"
-        android:id="@+id/editText"/>
-    <Button
+        android:hint=""
+        android:id="@+id/editText"
+        android:layout_marginTop="60dp"
+        android:text="http://www.eecg.utoronto.ca/~jayar/PeopleList" />
+    <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="populate"
-        android:id="@+id/populate"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:enabled="false"
+        android:visibility="invisible"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="150sp">
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:text="populate"
+        android:id="@+id/populate"
+        android:layout_marginRight="20sp"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:text="search"
         android:id="@+id/search"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:layout_marginLeft="20sp"
+        android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 </LinearLayout>

@@ -23,18 +23,18 @@
         <dex dex="/Users/apple/AndroidStudioProjects/threaddatabase/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-9076623d84db6460fee9e59402319569e6c28e29.jar" />
     </item>
     <item
-        jar="/Users/apple/AndroidStudioProjects/threaddatabase/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/apple/AndroidStudioProjects/threaddatabase/app/build/intermediates/pre-dexed/debug/classes-d6ed2f3f862cff6fdbd67ab57873612bc04cb265.jar" />
-    </item>
-    <item
         jar="/Users/apple/AndroidStudioProjects/threaddatabase/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
         <dex dex="/Users/apple/AndroidStudioProjects/threaddatabase/app/build/intermediates/pre-dexed/debug/classes-21be06e8765fae4222868e8369e047e5a6830e77.jar" />
+    </item>
+    <item
+        jar="/Users/apple/AndroidStudioProjects/threaddatabase/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/apple/AndroidStudioProjects/threaddatabase/app/build/intermediates/pre-dexed/debug/classes-d6ed2f3f862cff6fdbd67ab57873612bc04cb265.jar" />
     </item>
 
 </items>

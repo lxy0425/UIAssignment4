@@ -12,10 +12,12 @@ import java.sql.SQLException;
  */
 // Declare Variables
 public class DataBaseConnector {
-    private static final String DATABASE_NAME = "constant.db";
+    private static final String DATABASE_NAME = "CONSTANT.db";
     private static final int SCHEMA = 1;
     final String TITLE = "title";
-    final String TABLE = "constant";
+    final String TABLE = "CONSTANT";
+    final String BIO = "bio";
+    final String PICTURE = "picture";
     private SQLiteDatabase database;
     private DataBaseHelper dbOpenHelper;
 
@@ -36,21 +38,49 @@ public class DataBaseConnector {
     }
 
     // Create Database function
-    public void InsertNote(String title) {
-        ContentValues newCon = new ContentValues();
-        newCon.put(TITLE, title);
+    public void InsertNote(String title,String bio,String pic) {
         try{
             open();
         }
         catch (Exception e){
 
         }
-        database.insert(TABLE, TITLE, newCon);
+        ContentValues newCon = new ContentValues();
+        newCon.put(TITLE, title);
+        newCon.put(BIO,bio);
+        newCon.put(PICTURE,pic);
+        long k = database.insert(TABLE,null,newCon);
         close();
     }
+//    public void InsertNoteBIO(String bio) {
+//        ContentValues newCon = new ContentValues();
+//        newCon.put(BIO,bio);
+//        try{
+//            open();
+//        }
+//        catch (Exception e){
+//
+//        }
+//        database.insert(TABLE, BIO, newCon);
+//        close();
+//    }
+//    public void InsertNotePIC(String pic) {
+//        ContentValues newCon = new ContentValues();
+//        newCon.put(PICTURE, pic);
+//        try{
+//            open();
+//        }
+//        catch (Exception e){
+//
+//        }
+//        database.insert(TABLE, PICTURE, newCon);
+//        close();
+//    }
     protected Cursor getNode() {
-        return database.query(TABLE,new String[] {"ROWID AS _id",TITLE,},
-                                null, null, null, null, TITLE);
+//        return database.query(TABLE,new String[] {"ROWID AS _id",TITLE,BIO,PICTURE},
+//                                null, null, null, null, null);
+        return database.query(TABLE,null,
+                                null, null, null, null, null);
     }
 
     public void DeleteNote() {

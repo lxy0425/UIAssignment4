@@ -18,9 +18,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
     public void onCreate(SQLiteDatabase db){
 
-        db.execSQL("CREATE TABLE CONSTANT(title TEXT,value REAL)");
+//        db.execSQL("CREATE TABLE IF NOT EXISTS CONSTANT (title TEXT PRIMARY KEY,bio TEXT,picture TEXT)");
+          db.execSQL("CREATE TABLE CONSTANT (title TEXT PRIMARY KEY,bio TEXT,picture TEXT,UNIQUE(title) ON CONFLICT REPLACE);");
     }
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+        db.execSQL("DROP TABLE IF EXISTS"+"CONSTANT");
         onCreate(db);
         throw new RuntimeException("How did we get here?");
     }

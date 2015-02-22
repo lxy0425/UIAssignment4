@@ -16,26 +16,31 @@ package com.example.apple.threaddatabase;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
+import android.support.v4.app.FragmentManager;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
-public class ConstantsBrowser extends Activity{
+public class ConstantsBrowser extends FragmentActivity{
     Button populate;
     Button search;
     ArrayList<String> name1 = new ArrayList<>();
+    EditText editText;
   @Override
 public void onCreate (Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.start);
     populate = (Button)findViewById(R.id.populate);
     search = (Button)findViewById(R.id.search);
+    editText = (EditText)findViewById(R.id.editText);
     View.OnClickListener l = new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-              if (getFragmentManager().findFragmentById(android.R.id.content)==null) {
-                  getFragmentManager().beginTransaction()
+              if (getSupportFragmentManager().findFragmentById(android.R.id.content)==null) {
+                  getSupportFragmentManager().beginTransaction()
                           .replace(android.R.id.content,
                                   new ConstantsFragment()).commit();
               }
@@ -50,5 +55,8 @@ public void onCreate (Bundle savedInstanceState) {
     public void setName1(ArrayList<String> name){
         name1.clear();
         name1 = name;
+    }
+    public String geturl(){
+        return (editText.getText().toString());
     }
   }

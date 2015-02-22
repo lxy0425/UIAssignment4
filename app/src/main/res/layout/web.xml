@@ -8,13 +8,4 @@
         android:layout_weight="90"
         android:id="@+id/webView">
         </WebView>
-    <Button
-        android:layout_width="150sp"
-        android:layout_height="0sp"
-        android:layout_weight="10"
-        android:text="back"
-        android:textSize="30sp"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/back"/>
-
 </LinearLayout>
